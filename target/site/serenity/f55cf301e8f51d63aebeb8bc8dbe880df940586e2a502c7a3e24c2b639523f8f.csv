@@ -1,3 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Login de usuario","Login de usuario exitoso","ERROR","2023-12-14T17:28:36.3884827-05:00[America/Bogota]","0.0","0.48"
-"Login de usuario","Login de usuario exitoso","SUCCESS","2023-12-14T17:56:57.0252163-05:00[America/Bogota]","0.0","16.54"
+"Formularios ciclicos","Rellenar formularios","PENDING","2024-09-10T22:32:47.1773478-05:00[America/Bogota]","0.0","0.21"
+"Formularios ciclicos","Rellenar formularios","SUCCESS","2024-09-10T23:08:45.409906-05:00[America/Bogota]","0.0","57.73"
+"Login de usuario","Login de usuario exitoso","PENDING","2024-09-10T22:51:51.3900916-05:00[America/Bogota]","0.0","0.21"
+"Login de usuario","Login de usuario exitoso","SUCCESS","2024-09-10T22:59:47.6379633-05:00[America/Bogota]","0.0","11.84"

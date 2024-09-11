@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Login de usuario" skipped="0" tests="1" time="0.48" timestamp="2023-12-14 05:28:36"><testcase name="Login de usuario exitoso"><error message="Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">Index 0 out of bounds for length 0</error><system-err>Index 0 out of bounds for length 0&#13;
-co.com.stepDefinitions.LoginStepDefinition.queElUsuarioSeEncuentreEnLaPaginaWeb(LoginStepDefinition.java:22)&#13;
-✽.que el usuario se encuentre en la pagina web(file:///C:/Users/SQA/Desktop/SQA/TemplateScreenplay/src/test/resources/features/login.feature:6)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login de usuario" skipped="1" tests="1" time="0.21" timestamp="2024-09-10 10:51:51"><testcase name="Login de usuario exitoso"><skipped/></testcase></testsuite>

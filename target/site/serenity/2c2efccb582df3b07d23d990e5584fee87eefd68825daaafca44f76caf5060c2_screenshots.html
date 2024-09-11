@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4cce504925a247bb52eef2b56d8095e351f53806dca1f9d2f709a7e458813fe2.html">Formularios Ciclicos</a></span>
+                > <span class="truncate-60"><a
+                    href="2c2efccb582df3b07d23d990e5584fee87eefd68825daaafca44f76caf5060c2.html">Rellenar formularios </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-09-2024 23:08</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Formularios Ciclicos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Rellenar formularios
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="829dbea245d1788f2f1cc1e3804686f8e903f6050cc923ee6b6d869580962512.png" title=" Dado que el usuario se encuentre en la pagina web del reto" width="3841"/>
+                <img src="829dbea245d1788f2f1cc1e3804686f8e903f6050cc923ee6b6d869580962512.png" title=" Daniel abrir navegador" width="3841"/>
+                <img src="829dbea245d1788f2f1cc1e3804686f8e903f6050cc923ee6b6d869580962512.png" title=" Daniel opens the browser at https://tasks.evalartapp.com/automatization/" width="3841"/>
+                <img src="829dbea245d1788f2f1cc1e3804686f8e903f6050cc923ee6b6d869580962512.png" title=" Daniel abrir navegador (completed)" width="3841"/>
+                <img src="829dbea245d1788f2f1cc1e3804686f8e903f6050cc923ee6b6d869580962512.png" title=" Dado que el usuario se encuentre en la pagina web del reto (completed)" width="3841"/>
+                <img src="180bf4aa59c2a1dec78a5cdc381beb19e79dca5e0ccac4a31ea7652e17f4382e.png" title=" Cuando ingrese el usuario con la clave" width="3841"/>
+                <img src="180bf4aa59c2a1dec78a5cdc381beb19e79dca5e0ccac4a31ea7652e17f4382e.png" title=" Daniel login task" width="3841"/>
+                <img src="180bf4aa59c2a1dec78a5cdc381beb19e79dca5e0ccac4a31ea7652e17f4382e.png" title=" Daniel enters '913241' into usuario" width="3841"/>
+                <img src="8ea616b1e16fc159ea468068d48fe29e97d8dd47af276a72225510afa597169a.png" title=" Daniel enters '913241' into usuario (completed)" width="3841"/>
+                <img src="8ea616b1e16fc159ea468068d48fe29e97d8dd47af276a72225510afa597169a.png" title=" Daniel enters '10df2f32286b7120MS00LTE0MjMxOQ==30e0c83e6c29f1c3' into ingresar clave" width="3841"/>
+                <img src="5c9b13a86aba0247ceb365067e1a33ca2e5339f9ebcc84d5c263dbdcaaa5df12.png" title=" Daniel enters '10df2f32286b7120MS00LTE0MjMxOQ==30e0c83e6c29f1c3' into ingresar clave (completed)" width="3841"/>
+                <img src="e519c48f1397f1e31b19d3a9dd3ed409588b18798a0f6c9527b837aae6a36440.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="13e2a12b868f084688fc113b18091674efc300b72eefd959c12623feb0f4ec75.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="13e2a12b868f084688fc113b18091674efc300b72eefd959c12623feb0f4ec75.png" title=" Daniel login task (completed)" width="3841"/>
+                <img src="13e2a12b868f084688fc113b18091674efc300b72eefd959c12623feb0f4ec75.png" title=" Cuando ingrese el usuario con la clave (completed)" width="3841"/>
+                <img src="b78d6d1dab0a82805f79f3fe6b61fb314437639f9ab9f47986d7bc365b49edbe.png" title=" Dado que el usuario diligencie el primer ciclo de formularios" width="3841"/>
+                <img src="b78d6d1dab0a82805f79f3fe6b61fb314437639f9ab9f47986d7bc365b49edbe.png" title=" Daniel form ciclo1 task" width="3841"/>
+                <img src="b78d6d1dab0a82805f79f3fe6b61fb314437639f9ab9f47986d7bc365b49edbe.png" title=" Daniel enters '16' into ingresar clave" width="3841"/>
+                <img src="6b5882a4423f7cd8b85723f9921e33e0264eacfe585fdf377ae01e1f26d0a1a1.png" title=" Daniel enters '16' into ingresar clave (completed)" width="3841"/>
+                <img src="6b5882a4423f7cd8b85723f9921e33e0264eacfe585fdf377ae01e1f26d0a1a1.png" title=" Daniel enters 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' into ingresar clave" width="3841"/>
+                <img src="385d98cc7647e86391a61faf5c2552828507e417cf8d40edc906ea4c1c55044d.png" title=" Daniel enters 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' into ingresar clave" width="3841"/>
+                <img src="89def58c6fe6351e934e23fd3a9f751a7b3c5544a1d87b0e50aac64f9db881f0.png" title=" Daniel enters 'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB' into ingresar clave (completed)" width="3841"/>
+                <img src="89def58c6fe6351e934e23fd3a9f751a7b3c5544a1d87b0e50aac64f9db881f0.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="88f89615ce6190af0d418aeb858c0ccc8ca084129a7ac960ffd382f4dc4780c0.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="88f89615ce6190af0d418aeb858c0ccc8ca084129a7ac960ffd382f4dc4780c0.png" title=" Daniel form ciclo1 task (completed)" width="3841"/>
+                <img src="88f89615ce6190af0d418aeb858c0ccc8ca084129a7ac960ffd382f4dc4780c0.png" title=" Dado que el usuario diligencie el primer ciclo de formularios (completed)" width="3841"/>
+                <img src="283b72279db102d2b50527edbd9a128f7c9f2b70e907db82bb7ef38c1672d180.png" title=" Cuando vaya avanzando cada uno de ellos hasta completar los diez ciclos" width="3841"/>
+                <img src="283b72279db102d2b50527edbd9a128f7c9f2b70e907db82bb7ef38c1672d180.png" title=" Daniel form ciclo2 task" width="3841"/>
+                <img src="283b72279db102d2b50527edbd9a128f7c9f2b70e907db82bb7ef38c1672d180.png" title=" Daniel enters '12' into ingresar clave" width="3841"/>
+                <img src="b895bb2bb8235e00b56c175c611f565a47c0f4f469b0e37d9563d84fcf634a1d.png" title=" Daniel enters 'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj' into ingresar clave" width="3841"/>
+                <img src="f2f4a649e3898e351a95840dccb23882645cbfe4d3431463a4032c9e00fb14e4.png" title=" Daniel enters 'jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj' into ingresar clave (completed)" width="3841"/>
+                <img src="f2f4a649e3898e351a95840dccb23882645cbfe4d3431463a4032c9e00fb14e4.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="b15accc414ffa5af14a18792b9ad80fa96348f3c4d86da30e1e02cb990f3b3a6.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="b15accc414ffa5af14a18792b9ad80fa96348f3c4d86da30e1e02cb990f3b3a6.png" title=" Daniel form ciclo2 task (completed)" width="3841"/>
+                <img src="b15accc414ffa5af14a18792b9ad80fa96348f3c4d86da30e1e02cb990f3b3a6.png" title=" Daniel form ciclo3 task" width="3841"/>
+                <img src="b15accc414ffa5af14a18792b9ad80fa96348f3c4d86da30e1e02cb990f3b3a6.png" title=" Daniel enters '8' into ingresar clave" width="3841"/>
+                <img src="c62651f9deacb4e49a3a1890425be3a178a5bff4bc3657695254abec15eadacc.png" title=" Daniel enters '8' into ingresar clave (completed)" width="3841"/>
+                <img src="c62651f9deacb4e49a3a1890425be3a178a5bff4bc3657695254abec15eadacc.png" title=" Daniel enters 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH' into ingresar clave" width="3841"/>
+                <img src="87d8688c22acb8a6bcfc2fdfb16f866642a1dc2a6741dae7d1b8a62d6955d8ec.png" title=" Daniel enters 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH' into ingresar clave (completed)" width="3841"/>
+                <img src="87d8688c22acb8a6bcfc2fdfb16f866642a1dc2a6741dae7d1b8a62d6955d8ec.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="a6b258eded37a68b2da4ea1a1a7a52b853ce1629000ce5d9b98d751e72296b1e.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="a6b258eded37a68b2da4ea1a1a7a52b853ce1629000ce5d9b98d751e72296b1e.png" title=" Daniel form ciclo3 task (completed)" width="3841"/>
+                <img src="a6b258eded37a68b2da4ea1a1a7a52b853ce1629000ce5d9b98d751e72296b1e.png" title=" Daniel form ciclo4 task" width="3841"/>
+                <img src="a6b258eded37a68b2da4ea1a1a7a52b853ce1629000ce5d9b98d751e72296b1e.png" title=" Daniel enters '11' into ingresar clave" width="3841"/>
+                <img src="94b1a4147a250f8c5622f8a47086c17cf15e955ff7f568edf02d4281e382d906.png" title=" Daniel enters '11' into ingresar clave (completed)" width="3841"/>
+                <img src="94b1a4147a250f8c5622f8a47086c17cf15e955ff7f568edf02d4281e382d906.png" title=" Daniel enters 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' into ingresar clave" width="3841"/>
+                <img src="a7a96d1730c1a49eeae66e25a25b771d1490fe4d873b55b303eeb54eba1a1ac7.png" title=" Daniel enters 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' into ingresar clave (completed)" width="3841"/>
+                <img src="a7a96d1730c1a49eeae66e25a25b771d1490fe4d873b55b303eeb54eba1a1ac7.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="324d41963e36a122bed3262e4df3c558dddcc0ba765c1e3a21bbe4cea2bd7785.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="324d41963e36a122bed3262e4df3c558dddcc0ba765c1e3a21bbe4cea2bd7785.png" title=" Daniel form ciclo4 task (completed)" width="3841"/>
+                <img src="324d41963e36a122bed3262e4df3c558dddcc0ba765c1e3a21bbe4cea2bd7785.png" title=" Daniel form ciclo5 task" width="3841"/>
+                <img src="324d41963e36a122bed3262e4df3c558dddcc0ba765c1e3a21bbe4cea2bd7785.png" title=" Daniel enters '16' into ingresar clave" width="3841"/>
+                <img src="16ca337323598091f16ca6533e9349bc247dcca1e24730aae9b2793362abe00a.png" title=" Daniel enters '16' into ingresar clave (completed)" width="3841"/>
+                <img src="16ca337323598091f16ca6533e9349bc247dcca1e24730aae9b2793362abe00a.png" title=" Daniel enters 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk' into ingresar clave" width="3841"/>
+                <img src="544dc371fa8985a30ca8b78bd58bbab7e45024741724874ca6465ff5fbb09780.png" title=" Daniel enters 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk' into ingresar clave (completed)" width="3841"/>
+                <img src="544dc371fa8985a30ca8b78bd58bbab7e45024741724874ca6465ff5fbb09780.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="6c171d4c0d00a305c812939c4c4fa97a6c895ae844226032c5ca47e8e9f7ea50.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="6c171d4c0d00a305c812939c4c4fa97a6c895ae844226032c5ca47e8e9f7ea50.png" title=" Daniel form ciclo5 task (completed)" width="3841"/>
+                <img src="6c171d4c0d00a305c812939c4c4fa97a6c895ae844226032c5ca47e8e9f7ea50.png" title=" Daniel form ciclo6 task" width="3841"/>
+                <img src="6c171d4c0d00a305c812939c4c4fa97a6c895ae844226032c5ca47e8e9f7ea50.png" title=" Daniel enters '13' into ingresar clave" width="3841"/>
+                <img src="a13c191b89f80b600a32dc0220e2f42739a05f23d28f201c6bf731d260c01c05.png" title=" Daniel enters '13' into ingresar clave (completed)" width="3841"/>
+                <img src="a13c191b89f80b600a32dc0220e2f42739a05f23d28f201c6bf731d260c01c05.png" title=" Daniel enters 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff' into ingresar clave" width="3841"/>
+                <img src="15c96abbab5a0575f36cf471cd20e8e2f6a8ae35e9fcc508677ee66c7757a504.png" title=" Daniel enters 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff' into ingresar clave (completed)" width="3841"/>
+                <img src="15c96abbab5a0575f36cf471cd20e8e2f6a8ae35e9fcc508677ee66c7757a504.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="3822208bf89e81db3f78eb984af7a8b38477aafd032f90ceaa2f376223d25fec.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="3822208bf89e81db3f78eb984af7a8b38477aafd032f90ceaa2f376223d25fec.png" title=" Daniel form ciclo6 task (completed)" width="3841"/>
+                <img src="3822208bf89e81db3f78eb984af7a8b38477aafd032f90ceaa2f376223d25fec.png" title=" Daniel form ciclo7 task" width="3841"/>
+                <img src="3822208bf89e81db3f78eb984af7a8b38477aafd032f90ceaa2f376223d25fec.png" title=" Daniel enters '15' into ingresar clave" width="3841"/>
+                <img src="f63458c94b76970d93c61d616e1aa889f223a129a408eb57f9b546cdf1ba3d52.png" title=" Daniel enters '15' into ingresar clave (completed)" width="3841"/>
+                <img src="f63458c94b76970d93c61d616e1aa889f223a129a408eb57f9b546cdf1ba3d52.png" title=" Daniel enters 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU' into ingresar clave" width="3841"/>
+                <img src="0b0710499c7bae2c29035dfb242a102a9270e082858b161377bad15fc9f714aa.png" title=" Daniel enters 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU' into ingresar clave (completed)" width="3841"/>
+                <img src="0b0710499c7bae2c29035dfb242a102a9270e082858b161377bad15fc9f714aa.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="7ba66a8ebbbbf816c00ea135287b89d306f5b7c1582fe3c501b904e1a677535c.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="7ba66a8ebbbbf816c00ea135287b89d306f5b7c1582fe3c501b904e1a677535c.png" title=" Daniel form ciclo7 task (completed)" width="3841"/>
+                <img src="7ba66a8ebbbbf816c00ea135287b89d306f5b7c1582fe3c501b904e1a677535c.png" title=" Daniel form ciclo8 task" width="3841"/>
+                <img src="7ba66a8ebbbbf816c00ea135287b89d306f5b7c1582fe3c501b904e1a677535c.png" title=" Daniel enters '12' into ingresar clave" width="3841"/>
+                <img src="21ea896460cc2ad0dba7f5f9a88eff6c4bb45af4b056e11f5a91610f3c8a6875.png" title=" Daniel enters '12' into ingresar clave (completed)" width="3841"/>
+                <img src="21ea896460cc2ad0dba7f5f9a88eff6c4bb45af4b056e11f5a91610f3c8a6875.png" title=" Daniel enters 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh' into ingresar clave" width="3841"/>
+                <img src="a765fee5f8893ea6a7528d6e620f726f85d27f8f6bcc2dfb77c7dab03db7dca2.png" title=" Daniel enters 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh' into ingresar clave (completed)" width="3841"/>
+                <img src="a765fee5f8893ea6a7528d6e620f726f85d27f8f6bcc2dfb77c7dab03db7dca2.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="716a0159dd3cd8450c9e7ab0f6ad3563bf5c0c55bf78f61b65bac63da61942f6.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="716a0159dd3cd8450c9e7ab0f6ad3563bf5c0c55bf78f61b65bac63da61942f6.png" title=" Daniel form ciclo8 task (completed)" width="3841"/>
+                <img src="716a0159dd3cd8450c9e7ab0f6ad3563bf5c0c55bf78f61b65bac63da61942f6.png" title=" Daniel form ciclo9 task" width="3841"/>
+                <img src="716a0159dd3cd8450c9e7ab0f6ad3563bf5c0c55bf78f61b65bac63da61942f6.png" title=" Daniel enters '9' into ingresar clave" width="3841"/>
+                <img src="47d51af7cc6ce5e130b3e01130ae9c0d66b4022b6a704ab284c526861d9732d1.png" title=" Daniel enters '9' into ingresar clave (completed)" width="3841"/>
+                <img src="87b16643f6e36d7824a498438ab1f7eaa9e1a5ce4c8d964c4503ff9e61ae1dbf.png" title=" Daniel enters 'QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ' into ingresar clave" width="3841"/>
+                <img src="4f0a3285bc9bddbfe50c969a48e5ac3dd70e24f867731462363ccb0ff5ca3b1a.png" title=" Daniel enters 'QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ' into ingresar clave (completed)" width="3841"/>
+                <img src="4f0a3285bc9bddbfe50c969a48e5ac3dd70e24f867731462363ccb0ff5ca3b1a.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="3ccb690120f5b97b9ea027e8f527028db1efc27d01f46965a8f7f8940dbb2bf3.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="3ccb690120f5b97b9ea027e8f527028db1efc27d01f46965a8f7f8940dbb2bf3.png" title=" Daniel form ciclo9 task (completed)" width="3841"/>
+                <img src="3ccb690120f5b97b9ea027e8f527028db1efc27d01f46965a8f7f8940dbb2bf3.png" title=" Daniel form ciclo10 task" width="3841"/>
+                <img src="3ccb690120f5b97b9ea027e8f527028db1efc27d01f46965a8f7f8940dbb2bf3.png" title=" Daniel enters '16' into ingresar clave" width="3841"/>
+                <img src="0607c4c56a3b21825907832fd74c0466e96c2c76d4ee8ed77b08ec1bb3a2f13a.png" title=" Daniel enters '16' into ingresar clave (completed)" width="3841"/>
+                <img src="0607c4c56a3b21825907832fd74c0466e96c2c76d4ee8ed77b08ec1bb3a2f13a.png" title=" Daniel enters 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF' into ingresar clave" width="3841"/>
+                <img src="3354ce3c72bf86a366ea080df52a4b989e05ef706efc2c805ebb70485ecf9617.png" title=" Daniel enters 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF' into ingresar clave (completed)" width="3841"/>
+                <img src="3354ce3c72bf86a366ea080df52a4b989e05ef706efc2c805ebb70485ecf9617.png" title=" Daniel clicks on boton ingresar" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Daniel clicks on boton ingresar (completed)" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Daniel form ciclo10 task (completed)" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Cuando vaya avanzando cada uno de ellos hasta completar los diez ciclos (completed)" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Entonces el usuario visualizara un hash de &eacute;xito" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Then validacion hash exitoso should be (true)" width="3841"/>
+                <img src="30220071cdeb9cb11129f4911b46400bfdaf0a327ccb009b52cf8283107c223a.png" title=" Daniel imprimir hash exitoso: <span class='success-color'>SUCCESS</span>" width="3841"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
